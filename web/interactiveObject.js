@@ -22,13 +22,14 @@ function draw() {
                     const fieldX = document.getElementById('X_field');
                     const fieldY = document.getElementById('Y_field');
 
-                    if (fieldX.value !== "") {
-                        document.getElementById("x" + fieldX.value).classList.remove("active");
-                    }
+                    if (fieldX.value !== "") document.getElementById("x" + fieldX.value).classList.remove("active");
                     fieldX.value = x;
                     document.getElementById("x" + x).classList.add("active");
+                    document.getElementById('labelX').className = "input-group-text";
+
                     fieldY.value = y;
                     setValidMessageY("");
+                    document.getElementById('labelY').className = "input-group-text";
 
                     pointDraw()
                 }

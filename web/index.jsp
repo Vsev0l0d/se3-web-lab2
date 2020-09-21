@@ -21,7 +21,7 @@
     <div class="container">
         <form method="get" action="controllerServlet" class="form-group">
             <div class="input-group my-2">
-                <span class="input-group-text">X:</span>
+                <span id="labelX" class="input-group-text">X:</span>
                 <div class="btn-group">
                     <button type="button" class="btn btn-secondary" id="x-5" onclick="xChoose('-5')">-5</button>
                     <button type="button" class="btn btn-secondary" id="x-4" onclick="xChoose('-4')">-4</button>
@@ -37,13 +37,13 @@
             </div>
 
             <div class="input-group my-2">
-                <label for="Y_field" class="input-group-text">Y:</label>
-                <input type="text" class="form-control" id="Y_field" name="y" maxlength="8" onchange="update()" oninput=setValidMessageY("")>
+                <label id="labelY" for="Y_field" class="input-group-text">Y:</label>
+                <input type="text" class="form-control" id="Y_field" name="y" maxlength="8" onchange="update()" oninput=removeClaimsForY()>
             </div>
             <div id="fieldMessageY"></div>
 
             <div class="input-group my-2">
-                <span class="input-group-text">R:</span>
+                <span id="labelR" class="input-group-text">R:</span>
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                     <div class="align-bottom mx-2">
                         <input id="radio-1" type="radio" name="r_field" value="1" onclick="update()">
