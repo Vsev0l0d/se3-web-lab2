@@ -10,8 +10,13 @@ function draw() {
         canvas.addEventListener('click', canvasClicked, false);
 
         function canvasClicked(e) {
-            x = e.pageX - e.target.offsetLeft - zero;
-            y = zero - (e.pageY - e.target.offsetTop);
+            if (localStorage.getItem('upend') === '') {
+                x = e.pageX - e.target.offsetLeft - zero;
+                y = zero - (e.pageY - e.target.offsetTop);
+            } else {
+                x = document.documentElement.scrollWidth - e.pageX - e.target.offsetLeft - zero;
+                y = - (document.documentElement.scrollHeight - zero - e.pageY - e.target.offsetTop);
+            }
 
             r = getR();
             if (r !== null){

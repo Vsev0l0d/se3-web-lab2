@@ -1,14 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
-<html>
+<html style="height: 100%">
 <head>
     <meta charset="UTF-8">
     <title>Lab 2</title>
 
     <script src="main.js"></script>
     <script src="interactiveObject.js"></script>
+    <script src="upend.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
-<body onload="draw()" style="background-color:#e9ecef">
+<body onload="draw()" style="background-color:#e9ecef; min-height: 100vh;">
 <header>
     <nav class="navbar navbar-dark bg-dark">
         <span class="navbar-text">Вариант 3136</span>
@@ -54,7 +55,7 @@
                         <label for="radio-2">2</label>
                     </div>
                     <div class="align-bottom mx-2">
-                        <input id="radio-3" type="radio" name="r_field" value="3" onclick="update()">
+                        <input id="radio-3" type="radio" name="r_field" value="3" onclick="update()" checked>
                         <label for="radio-3">3</label>
                     </div>
                     <div class="align-bottom mx-2">
@@ -69,6 +70,7 @@
             </div>
 
             <button type="submit" id="submitButton" class="btn btn-dark">Отправить</button>
+            <button type="button" class="btn btn-dark" id="upendButton">Поворот на 180</button>
         </form>
     </div>
 </div>

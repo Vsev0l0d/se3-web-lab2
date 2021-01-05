@@ -1,11 +1,12 @@
 <%@ page import="models.Entry" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<html>
+<html style="height: 100%">
 <head>
     <title>Lab 2</title>
+    <script src="upend.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
-<body style="background-color:#e9ecef">
+<body style="background-color:#e9ecef; min-height: 100vh;">
 <header>
     <nav class="navbar navbar-dark bg-dark">
         <span class="navbar-text">Вариант 3136</span>
@@ -24,6 +25,7 @@
     <hr class="my-4">
     <form action="controllerServlet">
         <button type="submit" class="btn btn-dark btn-lg">Назад</button>
+        <button type="button" class="btn btn-dark btn-lg" id="upendButton">Поворот на 180</button>
     </form>
 </div>
 </body>
